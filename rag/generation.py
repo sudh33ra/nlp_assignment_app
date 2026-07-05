@@ -42,7 +42,7 @@ def generate_ollama(prompt: str, model: str = DEFAULT_OLLAMA_MODEL,
             "model": model,
             "prompt": prompt,
             "stream": False,
-            "options": {"temperature": 0.1},
+            "options": {"temperature": 0.1, "num_predict": 512},
         }, timeout=REQUEST_TIMEOUT)
     except requests.exceptions.ConnectionError as exc:
         raise GenerationError(

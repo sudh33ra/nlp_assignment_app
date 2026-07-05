@@ -15,11 +15,20 @@ services:
     environment:
       - OLLAMA_BASE_URL=http://ollama:11434
       - OLLAMA_MODEL=${OLLAMA_MODEL:-qwen2.5:0.5b}
+      # Keep CPU/memory use predictable on modest machines
+      - OMP_NUM_THREADS=2
+      - TOKENIZERS_PARALLELISM=false
+      - HF_HOME=/srv/app/.hf_cache
+    # Cap memory so a heavy embedding load cannot starve the Docker VM
+    mem_limit: 4g
     volumes:
       # Persist rebuilt indexes and processed chunks across container restarts
       - ./data:/srv/app/data
+      # Cache the embedding model download across container recreations
+      - hf_cache:/srv/app/.hf_cache
     depends_on:
       - ollama
 
 volumes:
   ollama_data:
+  hf_cache:
