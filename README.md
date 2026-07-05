@@ -133,17 +133,40 @@ rag/retrieval.py          top-k cosine retrieval
 rag/generation.py         Ollama + OpenAI-compatible clients, prompt builder
 rag/safety.py             evidence floor, certification guardrails
 data/sample_documents/    6 synthetic construction guidance docs (Markdown)
+data/raw_sources/hse/     40 real HSE construction guidance pages (Markdown, OGL v3.0)
 data/processed/           chunk JSONL per strategy (generated)
 data/indexes/             FAISS index per strategy (generated)
 data/sources.csv          document manifest
-scripts/build_indexes.py  reproducible index build
+data/rejected_sources.csv HSE sources that failed to fetch/clean (if any)
+scripts/build_indexes.py     reproducible index build (data/sample_documents/ only)
+scripts/fetch_hse_sources.py fetches + cleans the 40 HSE pages into data/raw_sources/hse/
+scripts/seed_hse_corpus.py   opt-in: builds indexes over sample_documents + raw_sources/hse
 scripts/evaluate.py       retrieval evaluation
 evaluation/questions.csv  evaluation question set
 evaluation/results.csv    evaluation output (generated)
 ```
 
+## Real-world source corpus (optional)
+
+In addition to the synthetic sample documents, `data/raw_sources/hse/` holds 40
+UK Health and Safety Executive (HSE) construction guidance pages, fetched and
+cleaned to Markdown (headings preserved, navigation/cookie/footer/"Is this page
+useful?" chrome stripped, no paraphrasing). This is an **opt-in** addition:
+
+```bash
+python scripts/fetch_hse_sources.py   # re-fetch/refresh the HSE markdown docs
+python scripts/seed_hse_corpus.py     # build indexes over sample_documents + raw_sources/hse
+```
+
+`scripts/build_indexes.py` is unaffected and continues to index only
+`data/sample_documents/` by default.
+
+Contains public sector information licensed under the Open Government Licence
+v3.0: <https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/>
+
 ## Notes and limitations
 
 - The sample documents are **synthetic educational material** written for this assignment (license: CC0). They are not real regulatory guidance and the system must not be used for real construction decisions.
+- The HSE pages under `data/raw_sources/hse/` are real regulatory guidance, licensed under the Open Government Licence v3.0; see `data/sources.csv` for per-document provenance (source URL, retrieval date, category).
 - `qwen2.5:0.5b` is deliberately small so the stack runs on modest hardware; answer quality is limited and the assignment focus is on **retrieval** differences between chunking strategies.
 - FAISS `IndexFlatIP` over normalised embeddings gives exact cosine search; fine at this corpus size.

@@ -14,3 +14,28 @@ q12,Is this site legally compliant with fire safety standards?,fire_safety_hot_w
 q13,Does our concrete mix meet the structural code requirements for sign-off?,concrete_works.md,certification
 q14,What is the best recipe for banana bread?,,out_of_scope
 q15,Who won the football world cup in 2022?,,out_of_scope
+q16,What is the minimum height above an edge that a top guard rail on a scaffold must be positioned?,hse_012.md,in_scope
+q17,How often must a scaffold be inspected once it is in use?,hse_012.md,in_scope
+q18,What should be done before using a ladder for a work task?,hse_011.md,in_scope
+q19,What are the five steps in carrying out a fire risk assessment on a construction site?,hse_022.md,in_scope
+q20,What type of fire extinguisher should be used for an electrical fire on site?,hse_022.md,in_scope
+q21,"How much can a cubic metre of soil weigh, and why does this matter for excavation safety?",hse_028.md,in_scope
+q22,Why should plant and vehicles not be parked close to the sides of an excavation?,hse_028.md,in_scope
+q23,What is a 'contract lift' and when might it be used?,hse_029.md,in_scope
+q24,What are the two principal hazards associated with tower and mobile cranes?,hse_029.md,in_scope
+q25,What proportion of dumper deaths involve the driver being crushed when the vehicle overturns?,hse_026.md,in_scope
+q26,What are the two main causes of fatal and serious injuries involving telescopic handlers?,hse_025.md,in_scope
+q27,What voltage system should portable tools use on site to limit the maximum voltage to earth to 55 volts?,hse_019.md,in_scope
+q28,How many construction workers are believed to die from exposure to silica dust every year?,hse_034.md,in_scope
+q29,What are the three main types of asbestos found in buildings?,hse_036.md,in_scope
+q30,Until roughly what year was asbestos widely used in buildings?,hse_036.md,in_scope
+q31,What is a simple sign that workers on a noisy construction site may need noise controls?,hse_038.md,in_scope
+q32,What condition can excessive hand-arm vibration exposure cause in construction workers?,hse_039.md,in_scope
+q33,What tool has HSE developed to help identify higher-risk manual handling tasks?,hse_040.md,in_scope
+q34,What information must a site induction cover for new workers?,hse_002.md,in_scope
+q35,How long before demolition work starts must notice be given to the local authority's building control department?,hse_030.md,in_scope
+q36,Can you confirm our crane lifting plan is legally compliant and sign it off?,hse_029.md,certification
+q37,Does our fire risk assessment meet all regulatory requirements for certification purposes?,hse_022.md,certification
+q38,"What welfare facilities, such as toilets and rest rooms, must be provided on a construction site?",,out_of_scope
+q39,What's a good recipe for a Sunday roast?,,out_of_scope
+q40,Who is the current Prime Minister of the UK?,,out_of_scope

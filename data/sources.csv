@@ -1,7 +1,47 @@
-doc_id,filename,title,description,license
+doc_id,filename,title,description,license,source_url,source_org,retrieved_at,category
 site_safety_general,site_safety_general.md,General Site Safety Guidance,"PPE, site access, housekeeping, hazard reporting, emergency arrangements",synthetic / CC0
 working_at_height,working_at_height.md,Working at Height,"Ladders, scaffolding, mobile towers, edge protection, fragile surfaces",synthetic / CC0
 concrete_works,concrete_works.md,Concrete Works,"Pour planning, formwork, reinforcement, placing, curing, cold weather concreting",synthetic / CC0
 electrical_safety,electrical_safety.md,Electrical Safety on Site,"Temporary electrics, cable management, inspection intervals, lockout-tagout, overhead lines",synthetic / CC0
 fire_safety_hot_works,fire_safety_hot_works.md,Fire Safety and Hot Works,"Hot work permits, extinguishers, flammable storage, escape routes",synthetic / CC0
 excavation_groundworks,excavation_groundworks.md,Excavation and Groundworks,"Permit to dig, trench support, spoil placement, confined spaces, backfilling",synthetic / CC0
+hse_001,raw_sources/hse/hse_001.md,Planning for construction work,,OGL v3.0,https://www.hse.gov.uk/construction/safetytopics/planning.htm,Health and Safety Executive (HSE),2026-07-05,safety_planning
+hse_002,raw_sources/hse/hse_002.md,Site rules and induction,,OGL v3.0,https://www.hse.gov.uk/construction/safetytopics/site-rules-induction.htm,Health and Safety Executive (HSE),2026-07-05,safety_planning
+hse_003,raw_sources/hse/hse_003.md,Traffic management on site,,OGL v3.0,https://www.hse.gov.uk/construction/safetytopics/vehiclestrafficmanagement.htm,Health and Safety Executive (HSE),2026-07-05,site_traffic
+hse_004,raw_sources/hse/hse_004.md,Site lighting,,OGL v3.0,https://www.hse.gov.uk/construction/safetytopics/site-lighting.htm,Health and Safety Executive (HSE),2026-07-05,site_management
+hse_005,raw_sources/hse/hse_005.md,Protecting the public,,OGL v3.0,https://www.hse.gov.uk/construction/safetytopics/publicprotection.htm,Health and Safety Executive (HSE),2026-07-05,public_safety
+hse_006,raw_sources/hse/hse_006.md,Materials storage and waste management,,OGL v3.0,https://www.hse.gov.uk/construction/safetytopics/storage.htm,Health and Safety Executive (HSE),2026-07-05,site_management
+hse_007,raw_sources/hse/hse_007.md,Administration,,OGL v3.0,https://www.hse.gov.uk/construction/safetytopics/admin.htm,Health and Safety Executive (HSE),2026-07-05,site_management
+hse_008,raw_sources/hse/hse_008.md,Assessing all work at height,,OGL v3.0,https://www.hse.gov.uk/construction/safetytopics/assess.htm,Health and Safety Executive (HSE),2026-07-05,work_at_height
+hse_009,raw_sources/hse/hse_009.md,Roof work,,OGL v3.0,https://www.hse.gov.uk/construction/safetytopics/roofwork.htm,Health and Safety Executive (HSE),2026-07-05,work_at_height
+hse_010,raw_sources/hse/hse_010.md,Fragile surfaces,,OGL v3.0,https://www.hse.gov.uk/construction/safetytopics/fragile.htm,Health and Safety Executive (HSE),2026-07-05,work_at_height
+hse_011,raw_sources/hse/hse_011.md,Using ladders safely,,OGL v3.0,https://www.hse.gov.uk/construction/safetytopics/ladders.htm,Health and Safety Executive (HSE),2026-07-05,work_at_height
+hse_012,raw_sources/hse/hse_012.md,Scaffolds,,OGL v3.0,https://www.hse.gov.uk/construction/safetytopics/scaffoldinginfo.htm,Health and Safety Executive (HSE),2026-07-05,work_at_height
+hse_013,raw_sources/hse/hse_013.md,Tower scaffolds,,OGL v3.0,https://www.hse.gov.uk/construction/safetytopics/scaffold.htm,Health and Safety Executive (HSE),2026-07-05,work_at_height
+hse_014,raw_sources/hse/hse_014.md,Mobile elevating work platforms,,OGL v3.0,https://www.hse.gov.uk/construction/safetytopics/mewp.htm,Health and Safety Executive (HSE),2026-07-05,work_at_height
+hse_015,raw_sources/hse/hse_015.md,Safety nets and soft landing systems,,OGL v3.0,https://www.hse.gov.uk/construction/safetytopics/safety-nets.htm,Health and Safety Executive (HSE),2026-07-05,work_at_height
+hse_016,raw_sources/hse/hse_016.md,Steel erection,,OGL v3.0,https://www.hse.gov.uk/construction/safetytopics/steel-erection.htm,Health and Safety Executive (HSE),2026-07-05,structural_work
+hse_017,raw_sources/hse/hse_017.md,Structural stability during alteration demolition and dismantling,,OGL v3.0,https://www.hse.gov.uk/construction/safetytopics/buildings.htm,Health and Safety Executive (HSE),2026-07-05,structural_work
+hse_018,raw_sources/hse/hse_018.md,Catastrophic events in construction,,OGL v3.0,https://www.hse.gov.uk/construction/pdf/m3-annex-5.pdf,Health and Safety Executive (HSE),2026-07-05,structural_work
+hse_019,raw_sources/hse/hse_019.md,Electricity systems in buildings,,OGL v3.0,https://www.hse.gov.uk/construction/safetytopics/systems.htm,Health and Safety Executive (HSE),2026-07-05,electrical_safety
+hse_020,raw_sources/hse/hse_020.md,Electricity overhead power lines,,OGL v3.0,https://www.hse.gov.uk/construction/safetytopics/overhead.htm,Health and Safety Executive (HSE),2026-07-05,electrical_safety
+hse_021,raw_sources/hse/hse_021.md,Electricity underground cables,,OGL v3.0,https://www.hse.gov.uk/construction/safetytopics/underground.htm,Health and Safety Executive (HSE),2026-07-05,electrical_safety
+hse_022,raw_sources/hse/hse_022.md,General fire safety,,OGL v3.0,https://www.hse.gov.uk/construction/safetytopics/generalfire.htm,Health and Safety Executive (HSE),2026-07-05,fire_safety
+hse_023,raw_sources/hse/hse_023.md,Process fire risks,,OGL v3.0,https://www.hse.gov.uk/construction/safetytopics/processfire.htm,Health and Safety Executive (HSE),2026-07-05,fire_safety
+hse_024,raw_sources/hse/hse_024.md,Excavators,,OGL v3.0,https://www.hse.gov.uk/construction/safetytopics/excavators.htm,Health and Safety Executive (HSE),2026-07-05,plant_equipment
+hse_025,raw_sources/hse/hse_025.md,Telescopic handlers,,OGL v3.0,https://www.hse.gov.uk/construction/safetytopics/telescopic.htm,Health and Safety Executive (HSE),2026-07-05,plant_equipment
+hse_026,raw_sources/hse/hse_026.md,Dumpers,,OGL v3.0,https://www.hse.gov.uk/construction/safetytopics/dumpers.htm,Health and Safety Executive (HSE),2026-07-05,plant_equipment
+hse_027,raw_sources/hse/hse_027.md,Slips and trips,,OGL v3.0,https://www.hse.gov.uk/construction/safetytopics/falls.htm,Health and Safety Executive (HSE),2026-07-05,site_hazards
+hse_028,raw_sources/hse/hse_028.md,Excavations,,OGL v3.0,https://www.hse.gov.uk/construction/safetytopics/excavations.htm,Health and Safety Executive (HSE),2026-07-05,groundworks
+hse_029,raw_sources/hse/hse_029.md,Lifting operations,,OGL v3.0,https://www.hse.gov.uk/construction/safetytopics/lifting-operations.htm,Health and Safety Executive (HSE),2026-07-05,lifting_operations
+hse_030,raw_sources/hse/hse_030.md,Demolition,,OGL v3.0,https://www.hse.gov.uk/construction/safetytopics/demolition.htm,Health and Safety Executive (HSE),2026-07-05,demolition
+hse_031,raw_sources/hse/hse_031.md,Prevention of drowning,,OGL v3.0,https://www.hse.gov.uk/construction/safetytopics/prevention-of-drowning.htm,Health and Safety Executive (HSE),2026-07-05,water_safety
+hse_032,raw_sources/hse/hse_032.md,Temporary works,,OGL v3.0,https://www.hse.gov.uk/construction/safetytopics/temporary-works.htm,Health and Safety Executive (HSE),2026-07-05,temporary_works
+hse_033,raw_sources/hse/hse_033.md,Construction health risks key points,,OGL v3.0,https://www.hse.gov.uk/construction/healthrisks/key-points.htm,Health and Safety Executive (HSE),2026-07-05,health_risks
+hse_034,raw_sources/hse/hse_034.md,Construction dust,,OGL v3.0,https://www.hse.gov.uk/construction/healthrisks/hazardous-substances/construction-dust.htm,Health and Safety Executive (HSE),2026-07-05,hazardous_substances
+hse_035,raw_sources/hse/hse_035.md,Cement,,OGL v3.0,https://www.hse.gov.uk/construction/healthrisks/hazardous-substances/cement.htm,Health and Safety Executive (HSE),2026-07-05,hazardous_substances
+hse_036,raw_sources/hse/hse_036.md,Asbestos,,OGL v3.0,https://www.hse.gov.uk/construction/healthrisks/cancer-and-construction/asbestos.htm,Health and Safety Executive (HSE),2026-07-05,hazardous_substances
+hse_037,raw_sources/hse/hse_037.md,Silica dust,,OGL v3.0,https://www.hse.gov.uk/construction/healthrisks/cancer-and-construction/silica-dust.htm,Health and Safety Executive (HSE),2026-07-05,hazardous_substances
+hse_038,raw_sources/hse/hse_038.md,Noise,,OGL v3.0,https://www.hse.gov.uk/construction/healthrisks/physical-ill-health-risks/noise.htm,Health and Safety Executive (HSE),2026-07-05,physical_health
+hse_039,raw_sources/hse/hse_039.md,Vibration,,OGL v3.0,https://www.hse.gov.uk/construction/healthrisks/physical-ill-health-risks/vibration.htm,Health and Safety Executive (HSE),2026-07-05,physical_health
+hse_040,raw_sources/hse/hse_040.md,Manual handling,,OGL v3.0,https://www.hse.gov.uk/construction/healthrisks/physical-ill-health-risks/manual-handling.htm,Health and Safety Executive (HSE),2026-07-05,physical_health
