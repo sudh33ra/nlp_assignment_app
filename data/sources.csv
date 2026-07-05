@@ -1,0 +1,7 @@
+doc_id,filename,title,description,license
+site_safety_general,site_safety_general.md,General Site Safety Guidance,"PPE, site access, housekeeping, hazard reporting, emergency arrangements",synthetic / CC0
+working_at_height,working_at_height.md,Working at Height,"Ladders, scaffolding, mobile towers, edge protection, fragile surfaces",synthetic / CC0
+concrete_works,concrete_works.md,Concrete Works,"Pour planning, formwork, reinforcement, placing, curing, cold weather concreting",synthetic / CC0
+electrical_safety,electrical_safety.md,Electrical Safety on Site,"Temporary electrics, cable management, inspection intervals, lockout-tagout, overhead lines",synthetic / CC0
+fire_safety_hot_works,fire_safety_hot_works.md,Fire Safety and Hot Works,"Hot work permits, extinguishers, flammable storage, escape routes",synthetic / CC0
+excavation_groundworks,excavation_groundworks.md,Excavation and Groundworks,"Permit to dig, trench support, spoil placement, confined spaces, backfilling",synthetic / CC0

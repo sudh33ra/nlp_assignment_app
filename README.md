@@ -1,0 +1,149 @@
+# Evaluating RAG Chunking Strategies for Safety-Constrained Question Answering over Construction Documentation
+
+An academic prototype (MSc NLP / Generative AI assignment) comparing three chunking strategies — **fixed-size**, **recursive**, and **section-aware** — in a retrieval-augmented generation (RAG) chatbot over synthetic construction-site documentation, with safety-constrained answering behaviour.
+
+## Architecture
+
+```
+                 ┌──────────────────────────────────────────────┐
+                 │                Streamlit UI                  │
+                 │  strategy / top_k / provider selection       │
+                 └────────┬─────────────────────────┬───────────┘
+                          │ query                   │ prompt (context-grounded)
+                          ▼                         ▼
+                 ┌────────────────┐        ┌──────────────────────┐
+                 │  FAISS index   │        │  LLM provider        │
+                 │  per strategy  │        │  Ollama (default) or │
+                 │  (IndexFlatIP) │        │  OpenAI-compatible   │
+                 └────────┬───────┘        └──────────────────────┘
+                          │ top-k chunks + cosine scores
+                          ▼
+                 ┌────────────────┐
+                 │ Safety layer   │  evidence floor · certification
+                 │ (rag/safety.py)│  guardrails · grounding notes
+                 └────────────────┘
+
+  Offline:  data/sample_documents/*.md ──► rag/chunking.py (3 strategies)
+            ──► sentence-transformers all-MiniLM-L6-v2 ──► data/indexes/<strategy>/
+```
+
+## Quickstart (Docker)
+
+```bash
+docker compose up --build
+```
+
+Then pull the default model (one-off, ~400 MB):
+
+```bash
+docker compose exec ollama ollama pull qwen2.5:0.5b
+```
+
+Open <http://localhost:8501>. The app builds the FAISS indexes automatically on first start if they are missing.
+
+No API key is needed for the default local mode.
+
+## Running locally without Docker
+
+Requires Python 3.10–3.12 (torch has no wheels for newer versions yet).
+
+```bash
+python3.11 -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
+python scripts/build_indexes.py
+streamlit run app/streamlit_app.py
+```
+
+For generation you also need [Ollama](https://ollama.com) running locally:
+
+```bash
+ollama pull qwen2.5:0.5b
+```
+
+## Rebuilding the indexes
+
+Indexes are fully reproducible (sorted file order, fixed chunking parameters, deterministic chunk ids).
+
+```bash
+# inside Docker
+docker compose exec app python scripts/build_indexes.py
+
+# or locally
+python scripts/build_indexes.py            # all three strategies
+python scripts/build_indexes.py --strategy section   # just one
+```
+
+Outputs:
+
+- `data/processed/chunks_<strategy>.jsonl` — chunk records (JSONL)
+- `data/indexes/<strategy>/index.faiss` + `chunks.jsonl` — FAISS index + aligned metadata
+
+## Switching chunking strategies
+
+Use the **Chunking strategy** selector in the sidebar. Each strategy queries its own prebuilt index:
+
+| Strategy | Method | Typical chunk |
+|---|---|---|
+| Fixed-size | 500-char windows, 50-char overlap, whitespace-aligned | mid-sentence fragments possible |
+| Recursive | split on `\n\n`, `\n`, `. `, ` ` down to ≤500 chars | paragraph/sentence aligned |
+| Section-aware | split on Markdown H1–H3 headings, heading kept as metadata and prepended to text | whole topical section |
+
+The **Top-k retrieved chunks** slider controls how many chunks are passed to the LLM (and shown in the sources panel).
+
+## Optional OpenAI-compatible API mode
+
+In the sidebar choose **OpenAI-compatible API** and fill in:
+
+- **API base URL** (e.g. `https://api.openai.com/v1`, or any compatible endpoint such as a local vLLM/LM Studio server)
+- **API key** (password field; leave blank for keyless local endpoints)
+- **API model** (e.g. `gpt-4o-mini`)
+
+Defaults can be pre-set via `.env` (see `.env.example`).
+
+## Safety-constrained behaviour
+
+Implemented in `rag/safety.py` and enforced in the app:
+
+- **Grounded answers only.** The prompt instructs the model to answer solely from retrieved passages.
+- **Evidence floor.** If the best retrieval cosine similarity is below `0.35`, the app refuses with "the documents do not provide enough evidence" — without calling the LLM at all.
+- **No certification claims.** The system prompt forbids claiming legal, regulatory, structural, or compliance certification.
+- **Certification-question detection.** Questions matching certification/compliance patterns get a standing disclaimer: the system can summarise the documents but cannot certify compliance.
+- Every answer shows a **grounding note** (strong / moderate / weak with the similarity score) and a collapsible **Retrieved sources** panel with document name, chunk id, similarity score, and snippet.
+
+## Evaluation
+
+`evaluation/questions.csv` contains 15 questions: 10 in-scope, 3 certification-type, 2 out-of-scope.
+
+```bash
+python scripts/evaluate.py              # retrieval-only (fast, no LLM needed)
+python scripts/evaluate.py --generate   # also generate answers via Ollama
+```
+
+Writes `evaluation/results.csv` with per-question, per-strategy: top-1 document, top-1 similarity, hit@k, grounding verdict, and certification flag, plus a hit@k summary per strategy.
+
+## Repository layout
+
+```
+app/streamlit_app.py      Streamlit UI
+rag/chunking.py           three chunking strategies (plain Python, no LangChain)
+rag/embeddings.py         all-MiniLM-L6-v2 wrapper (normalised vectors)
+rag/indexing.py           FAISS build/load per strategy
+rag/retrieval.py          top-k cosine retrieval
+rag/generation.py         Ollama + OpenAI-compatible clients, prompt builder
+rag/safety.py             evidence floor, certification guardrails
+data/sample_documents/    6 synthetic construction guidance docs (Markdown)
+data/processed/           chunk JSONL per strategy (generated)
+data/indexes/             FAISS index per strategy (generated)
+data/sources.csv          document manifest
+scripts/build_indexes.py  reproducible index build
+scripts/evaluate.py       retrieval evaluation
+evaluation/questions.csv  evaluation question set
+evaluation/results.csv    evaluation output (generated)
+```
+
+## Notes and limitations
+
+- The sample documents are **synthetic educational material** written for this assignment (license: CC0). They are not real regulatory guidance and the system must not be used for real construction decisions.
+- `qwen2.5:0.5b` is deliberately small so the stack runs on modest hardware; answer quality is limited and the assignment focus is on **retrieval** differences between chunking strategies.
+- FAISS `IndexFlatIP` over normalised embeddings gives exact cosine search; fine at this corpus size.

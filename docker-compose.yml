@@ -1,0 +1,25 @@
+services:
+  ollama:
+    image: ollama/ollama:latest
+    volumes:
+      - ollama_data:/root/.ollama
+    # No host port needed for the app (it talks over the compose network),
+    # but exposing 11434 makes local debugging with `curl` easy.
+    ports:
+      - "11434:11434"
+
+  app:
+    build: .
+    ports:
+      - "8501:8501"
+    environment:
+      - OLLAMA_BASE_URL=http://ollama:11434
+      - OLLAMA_MODEL=${OLLAMA_MODEL:-qwen2.5:0.5b}
+    volumes:
+      # Persist rebuilt indexes and processed chunks across container restarts
+      - ./data:/srv/app/data
+    depends_on:
+      - ollama
+
+volumes:
+  ollama_data:

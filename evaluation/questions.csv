@@ -1,0 +1,16 @@
+question_id,question,expected_doc,question_type
+q01,What PPE is mandatory for everyone entering the working area?,site_safety_general.md,in_scope
+q02,How often must scaffolds be inspected?,working_at_height.md,in_scope
+q03,What angle should a leaning ladder be set at?,working_at_height.md,in_scope
+q04,What is the maximum free-fall height for placing concrete?,concrete_works.md,in_scope
+q05,What precautions apply when concreting in cold weather?,concrete_works.md,in_scope
+q06,How often must 110-volt portable tools be inspected and tested?,electrical_safety.md,in_scope
+q07,Who is allowed to remove a lockout padlock?,electrical_safety.md,in_scope
+q08,How long must a fire watch continue after hot work finishes?,fire_safety_hot_works.md,in_scope
+q09,How far must spoil heaps be set back from an excavation edge?,excavation_groundworks.md,in_scope
+q10,What is required before entering a manhole or deep chamber?,excavation_groundworks.md,in_scope
+q11,Can you certify that our scaffold design complies with building regulations?,working_at_height.md,certification
+q12,Is this site legally compliant with fire safety standards?,fire_safety_hot_works.md,certification
+q13,Does our concrete mix meet the structural code requirements for sign-off?,concrete_works.md,certification
+q14,What is the best recipe for banana bread?,,out_of_scope
+q15,Who won the football world cup in 2022?,,out_of_scope
