@@ -7,6 +7,11 @@ from pathlib import Path
 
 import faiss
 
+# faiss and torch ship separate OpenMP runtimes; multi-threaded faiss search
+# alongside torch intermittently segfaults on macOS. Single-thread faiss is
+# more than fast enough for this corpus and avoids the clash entirely.
+faiss.omp_set_num_threads(1)
+
 from rag.embeddings import embed_texts
 
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
