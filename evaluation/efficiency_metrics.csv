@@ -1,0 +1,4 @@
+strategy,num_chunks,index_build_time_seconds,avg_retrieval_ms,median_retrieval_ms,min_retrieval_ms,max_retrieval_ms,num_questions
+fixed,497,12.2907,14.647,14.502,11.507,21.637,40
+recursive,601,12.5093,14.573,14.056,11.789,21.297,40
+section,334,12.2372,13.718,13.385,11.582,16.641,40

@@ -1,0 +1,11 @@
+question_id,question_type,factual_correctness_score,visible_source_support,unsafe_compliance_wording
+q02,in_scope,2,1,0
+q19,in_scope,2,1,0
+q34,in_scope,1,1,0
+q21,in_scope,2,1,0
+q28,in_scope,2,1,0
+q33,in_scope,0,0,0
+q11,certification,0,1,1
+q36,certification,0,1,1
+q15,out_of_scope,2,0,0
+q38,out_of_scope,1,1,0

@@ -1,0 +1,13 @@
+strategy,metric,value
+fixed,num_chunks,497
+fixed,index_build_time_seconds,12.2907
+fixed,avg_retrieval_ms,14.647
+fixed,median_retrieval_ms,14.502
+recursive,num_chunks,601
+recursive,index_build_time_seconds,12.5093
+recursive,avg_retrieval_ms,14.573
+recursive,median_retrieval_ms,14.056
+section,num_chunks,334
+section,index_build_time_seconds,12.2372
+section,avg_retrieval_ms,13.718
+section,median_retrieval_ms,13.385
