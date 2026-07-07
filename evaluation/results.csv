@@ -1,121 +1,247 @@
 question_id,strategy,question_type,expected_doc,top1_doc,top1_score,hit_at_k,grounding,certification_flag,answer
-q01,fixed,in_scope,site_safety_general.md,site_safety_general.md,0.5437,1,strong,0,
-q02,fixed,in_scope,working_at_height.md,hse_012.md,0.6584,0,strong,0,
-q03,fixed,in_scope,working_at_height.md,working_at_height.md,0.6442,1,strong,0,
-q04,fixed,in_scope,concrete_works.md,concrete_works.md,0.7134,1,strong,0,
-q05,fixed,in_scope,concrete_works.md,concrete_works.md,0.4939,1,moderate,0,
-q06,fixed,in_scope,electrical_safety.md,electrical_safety.md,0.7353,1,strong,0,
-q07,fixed,in_scope,electrical_safety.md,electrical_safety.md,0.4736,1,moderate,0,
-q08,fixed,in_scope,fire_safety_hot_works.md,fire_safety_hot_works.md,0.6732,1,strong,0,
-q09,fixed,in_scope,excavation_groundworks.md,excavation_groundworks.md,0.5847,1,strong,0,
-q10,fixed,in_scope,excavation_groundworks.md,excavation_groundworks.md,0.5487,1,strong,0,
-q11,fixed,certification,working_at_height.md,hse_017.md,0.6860,0,strong,1,
-q12,fixed,certification,fire_safety_hot_works.md,hse_023.md,0.6431,1,strong,1,
-q13,fixed,certification,concrete_works.md,concrete_works.md,0.5233,1,strong,1,
+q01,fixed,in_scope,site_safety_general.md,site_safety_general.md,0.5437,1,strong,0,"All personnel entering the working area must wear the mandatory minimum PPE at:
+
+- Control entry to the work area;
+- Plan storage areas so that delivery vehicles do not have to cross the site."
+q02,fixed,in_scope,working_at_height.md,hse_012.md,0.6584,0,strong,0,Scaffolds must be inspected every 7 days.
+q03,fixed,in_scope,working_at_height.md,working_at_height.md,0.6442,1,strong,0,75-degree angle
+q04,fixed,in_scope,concrete_works.md,concrete_works.md,0.7134,1,strong,0,"1. The passage states that ""the maximum free-fall height for concrete is 1.5 metres."" Therefore, the answer to this question is:
+
+   1. 1.5 meters
+
+This answer directly follows from the information provided in Passage 1 and does not require any external knowledge beyond what is stated in the context passages."
+q05,fixed,in_scope,concrete_works.md,concrete_works.md,0.4939,1,moderate,0,"When concreting in cold weather, the following precautions are applied:
+
+- The concrete must not be placed against frozen ground, ice, or frost-covered reinforcement. 
+- The temperature of the concrete at delivery must be at least 5 degrees Celsius.
+- The placed concrete must be kept above 5 degrees Celsius until it reaches 5 N/mm² strength using insulated blankets, enclosures, or heated aggregates as necessary.
+
+These precautions are to prevent damage and ensure the concrete is strong enough for construction."
+q06,fixed,in_scope,electrical_safety.md,electrical_safety.md,0.7353,1,strong,0,110-volt portable tools and leads should be inspected and tested every 3 months.
+q07,fixed,in_scope,electrical_safety.md,electrical_safety.md,0.4736,1,moderate,0,Site manager
+q08,fixed,in_scope,fire_safety_hot_works.md,fire_safety_hot_works.md,0.6732,1,strong,0,60 minutes
+q09,fixed,in_scope,excavation_groundworks.md,excavation_groundworks.md,0.5847,1,strong,0,The answer is 1 metre.
+q10,fixed,in_scope,excavation_groundworks.md,excavation_groundworks.md,0.5487,1,strong,0,"Before entering a manhole or deep chamber, it's necessary to perform atmospheric testing and continuous monitoring."
+q11,fixed,certification,working_at_height.md,hse_017.md,0.6860,0,strong,1,"Yes, according to the documents provided in Passage 4 (document: hse_012.md), your scaffold design must be designed by a competent person and should comply with the Work at Height Regulations 2005. The document states that ""unless a scaffold is assembled to a generally recognised standard configuration, such as National Access and Scaffolding Confederation (NASC) Technical Guidance TG20 for tube and fitting scaffolds or similar guidance from manufacturers' instructions for system scaffolds, the scaffold must be designed by bespoke calculation, and by a competent person."" This ensures that your scaffold will have adequate strength."
+q12,fixed,certification,fire_safety_hot_works.md,hse_023.md,0.6431,1,strong,1,"Yes, the construction site is legally compliant with fire safety standards according to the provided documents.
+
+The Regulatory Reform (Fire Safety) Order 2005 sets out the law on construction site general fire safety. The FSO requires that a 'responsible person' must carry out and keep up to date a risk assessment and implement appropriate measures to minimise the risk of fire to life and property from site activities. This means that the construction site is well-organized, with clear escape routes, fire point locations, assembly points, and temporary fire alarm call points.
+
+The CDM Regulations 2015 also impose duties including the requirement to prevent risks from fire. The responsible person will usually be the main or principal contractor in control of the site. This ensures that all construction activities are supervised by a competent person who is aware of the potential hazards associated with the site and has the necessary resources and expertise.
+
+The Fire Safety and Hot Works document provides specific measures for hot work sites, including electrical installations, bonfires, arson prevention, and fire load management. These measures ensure that construction activities comply with fire safety regulations and are managed in a safe manner.
+
+In summary, the construction site is well-organized, supervised by a responsible person, and has measures in place to prevent risks from fire. Therefore, it meets the legal requirements for fire safety compliance."
+q13,fixed,certification,concrete_works.md,concrete_works.md,0.5233,1,strong,1,No. The documents do not provide enough evidence to determine if the concrete mix meets the structural code requirements for signing off.
 q14,fixed,out_of_scope,,concrete_works.md,0.1655,0,weak,0,
 q15,fixed,out_of_scope,,hse_022.md,0.1931,0,weak,0,
-q16,fixed,in_scope,hse_012.md,working_at_height.md,0.6491,1,strong,0,
-q17,fixed,in_scope,hse_012.md,hse_012.md,0.6372,1,strong,0,
-q18,fixed,in_scope,hse_011.md,working_at_height.md,0.6584,1,strong,0,
-q19,fixed,in_scope,hse_022.md,hse_022.md,0.7820,1,strong,0,
-q20,fixed,in_scope,hse_022.md,hse_022.md,0.5894,1,strong,0,
-q21,fixed,in_scope,hse_028.md,hse_028.md,0.5676,1,strong,0,
-q22,fixed,in_scope,hse_028.md,excavation_groundworks.md,0.5722,1,strong,0,
-q23,fixed,in_scope,hse_029.md,hse_029.md,0.4962,1,moderate,0,
-q24,fixed,in_scope,hse_029.md,hse_029.md,0.6410,1,strong,0,
-q25,fixed,in_scope,hse_026.md,hse_026.md,0.6790,1,strong,0,
-q26,fixed,in_scope,hse_025.md,hse_025.md,0.5449,1,strong,0,
-q27,fixed,in_scope,hse_019.md,electrical_safety.md,0.7476,1,strong,0,
-q28,fixed,in_scope,hse_034.md,hse_034.md,0.8501,1,strong,0,
-q29,fixed,in_scope,hse_036.md,hse_036.md,0.7072,1,strong,0,
-q30,fixed,in_scope,hse_036.md,hse_036.md,0.6266,1,strong,0,
-q31,fixed,in_scope,hse_038.md,hse_038.md,0.6619,1,strong,0,
-q32,fixed,in_scope,hse_039.md,hse_039.md,0.8124,1,strong,0,
-q33,fixed,in_scope,hse_040.md,hse_040.md,0.5611,1,strong,0,
-q34,fixed,in_scope,hse_002.md,hse_002.md,0.7068,1,strong,0,
-q35,fixed,in_scope,hse_030.md,hse_030.md,0.7654,1,strong,0,
-q36,fixed,certification,hse_029.md,hse_029.md,0.5464,1,strong,1,
-q37,fixed,certification,hse_022.md,hse_022.md,0.6272,1,strong,1,
-q38,fixed,out_of_scope,,hse_005.md,0.4962,0,moderate,0,
+q16,fixed,in_scope,hse_012.md,working_at_height.md,0.6491,1,strong,0,950 mm
+q17,fixed,in_scope,hse_012.md,hse_012.md,0.6372,1,strong,0,Once every 7 days.
+q18,fixed,in_scope,hse_011.md,working_at_height.md,0.6584,1,strong,0,"Before using a ladder for a work task, inspect ladders before each use to ensure they are safe and suitable for the job."
+q19,fixed,in_scope,hse_022.md,hse_022.md,0.7820,1,strong,0,"The five steps in carrying out a fire risk assessment on a construction site are:
+
+1. **Identify hazards** : consider how a fire could start and what could burn.
+2. **People at risk** : employees, contractors, visitors and anyone who is vulnerable, eg disabled.
+3. **Evaluation and action** : consider the hazards and people identified in 1 and 2 and act to remove and reduce risk to protect people and premises.
+4. **Record, plan and train** : keep a record of the risks and action taken. Make a clear plan for fire safety and ensure that people understand what they need to do in the event of a fire; and
+5. **Review:** your assessment regularly and check it takes account of any changes on site."
+q20,fixed,in_scope,hse_022.md,hse_022.md,0.5894,1,strong,0,Dry powder extinguishers are suitable for electrical fires.
+q21,fixed,in_scope,hse_028.md,hse_028.md,0.5676,1,strong,0,"A cubic metre of soil weighs approximately 1.5 tonnes. This weight is crucial for excavation safety because it indicates the potential load on the excavator or bulldozer, which must be managed carefully to avoid damaging the ground or equipment."
+q22,fixed,in_scope,hse_028.md,excavation_groundworks.md,0.5722,1,strong,0,To prevent the sides of excavations from collapsing due to extra loads.
+q23,fixed,in_scope,hse_029.md,hse_029.md,0.4962,1,moderate,0,"A 'contract lift' refers to a type of crane hire where the user assumes certain responsibilities for planning, supervising, and carrying out lifting operations. It's typically used by construction companies that do not have the necessary skills or qualifications to perform these tasks themselves.
+
+When a crane is hired under a 'contract lift,' it means that the user (the crane owner) agrees to pay the crane hire company to use their equipment for specific lifting operations. This agreement usually includes details about the responsibilities of both parties, such as who should plan and supervise the operation and what safety measures need to be taken.
+
+The passage also mentions that people who hire cranes but do not have the necessary skills or qualifications will need to opt for a 'contract lift' from the crane hire company. This is because British Standard BS 7121Part 1 2006 sets out an acceptable standard for managing lifting operations using cranes on construction projects.
+
+In summary, a 'contract lift' is a type of crane hire where the user assumes certain responsibilities and obligations to perform specific lifting operations under the supervision of the crane owner."
+q24,fixed,in_scope,hse_029.md,hse_029.md,0.6410,1,strong,0,"* **Dangerous methods of erection or dismantling** – where a safe system is not being followed;
+  * **Defects in the erected scaffold** – where the tower structure is incorrectly assembled or where a platform guardrail is missing;"
+q25,fixed,in_scope,hse_026.md,hse_026.md,0.6790,1,strong,0,60%
+q26,fixed,in_scope,hse_025.md,hse_025.md,0.5449,1,strong,0,"The two main causes of fatal and serious injuries involving telescopic handlers are:
+
+  * **Overturning:** the machine may overturn throwing the operator from the basket.
+  * **Falling:** an operator may fall from the basket during operation."
+q27,fixed,in_scope,hse_019.md,electrical_safety.md,0.7476,1,strong,0,The maximum voltage to earth for portable tools on site is limited to 55 volts.
+q28,fixed,in_scope,hse_034.md,hse_034.md,0.8501,1,strong,0,500
+q29,fixed,in_scope,hse_036.md,hse_036.md,0.7072,1,strong,0,"Asbestos is a natural fibrous rock used in homes and other buildings until 1999. There are three main types:
+
+  * Crocidolite (also known as blue asbestos)
+  * Amosite (also known as brown asbestos)
+  * Chrysotile (also known as white asbestos)"
+q30,fixed,in_scope,hse_036.md,hse_036.md,0.6266,1,strong,0,Until 1999.
+q31,fixed,in_scope,hse_038.md,hse_038.md,0.6619,1,strong,0,"A simple sign that workers on a noisy construction site may need noise controls could be:
+
+""Please wear earplugs or earmuffs to protect your hearing."""
+q32,fixed,in_scope,hse_039.md,hse_039.md,0.8124,1,strong,0,Hand-Arm Vibration Syndrome (HAVS)
+q33,fixed,in_scope,hse_040.md,hse_040.md,0.5611,1,strong,0,The Manual Handling Assessment Chart (MAC) tool has been developed to help you identify higher-risk tasks in manual handling operations.
+q34,fixed,in_scope,hse_002.md,hse_002.md,0.7068,1,strong,0,"Site rules should cover topics such as personal protective equipment, use of radios and mobile phones, and emergency arrangements."
+q35,fixed,in_scope,hse_030.md,hse_030.md,0.7654,1,strong,0,Before demolition work starts.
+q36,fixed,certification,hse_029.md,hse_029.md,0.5464,1,strong,1,"Yes, we can. The crane lifting operation plan complies with all legal requirements outlined in Passage 2 (document: hse_029.md). It includes thorough examinations of the crane equipment at specified intervals, ensuring safe operations for various lifting scenarios. Additionally, the plan outlines specific safety measures such as safe slinging and signalling arrangements, maintenance checks, and regular inspections to ensure compliance with safety standards set by British Standard BS 7121Part 1 2006."
+q37,fixed,certification,hse_022.md,hse_022.md,0.6272,1,strong,1,"No, the documents do not provide enough evidence to certify that the fire risk assessment meets all regulatory requirements for certification purposes. The context passages only mention general guidelines and regulations related to construction site fire safety but do not specify or confirm their compliance with specific regulatory bodies or standards."
+q38,fixed,out_of_scope,,hse_005.md,0.4962,0,moderate,0,"Temporary works on a construction site also include:
+
+  * Site fencing and hoarding
+  * Welfare and office units
+  * Earthworks, including stockpiles, that will be removed later
+
+This information is directly stated in Passage 3 of the HSE (Health and Safety Executive) document ""HSE_012.md""."
 q39,fixed,out_of_scope,,hse_012.md,0.1059,0,weak,0,
 q40,fixed,out_of_scope,,hse_035.md,0.1405,0,weak,0,
-q01,recursive,in_scope,site_safety_general.md,site_safety_general.md,0.5343,1,strong,0,
-q02,recursive,in_scope,working_at_height.md,hse_012.md,0.6925,1,strong,0,
-q03,recursive,in_scope,working_at_height.md,working_at_height.md,0.7257,1,strong,0,
-q04,recursive,in_scope,concrete_works.md,concrete_works.md,0.7702,1,strong,0,
-q05,recursive,in_scope,concrete_works.md,concrete_works.md,0.5753,1,strong,0,
-q06,recursive,in_scope,electrical_safety.md,electrical_safety.md,0.7100,1,strong,0,
-q07,recursive,in_scope,electrical_safety.md,electrical_safety.md,0.5091,1,strong,0,
-q08,recursive,in_scope,fire_safety_hot_works.md,fire_safety_hot_works.md,0.7938,1,strong,0,
-q09,recursive,in_scope,excavation_groundworks.md,excavation_groundworks.md,0.6944,1,strong,0,
-q10,recursive,in_scope,excavation_groundworks.md,excavation_groundworks.md,0.6080,1,strong,0,
-q11,recursive,certification,working_at_height.md,hse_012.md,0.6611,0,strong,1,
-q12,recursive,certification,fire_safety_hot_works.md,hse_023.md,0.6323,1,strong,1,
-q13,recursive,certification,concrete_works.md,concrete_works.md,0.4800,1,moderate,1,
+q01,recursive,in_scope,site_safety_general.md,site_safety_general.md,0.5343,1,strong,0,"Safety helmet with chin strap, high-visibility vest or jacket, safety boots with steel or composite toe caps and midsole protection."
+q02,recursive,in_scope,working_at_height.md,hse_012.md,0.6925,1,strong,0,Scaffolds must be inspected at least every 7 days.
+q03,recursive,in_scope,working_at_height.md,working_at_height.md,0.7257,1,strong,0,A leaning ladder should be set at a 75-degree angle.
+q04,recursive,in_scope,concrete_works.md,concrete_works.md,0.7702,1,strong,0,"1. The maximum free-fall height for concrete is 1.5 meters.
+2. This information comes from Passage 1, which states ""The maximum free-fall height for concrete is 1.5 metres; use chutes, tremie pipes, or pump lines for deeper drops."""
+q05,recursive,in_scope,concrete_works.md,concrete_works.md,0.5753,1,strong,0,"When concreting in cold weather, special mixes must be used. The concrete temperature at delivery should be at least 5 degrees Celsius and above 5 N/mm² strength until it reaches this level of strength. Surface wetness during curing is necessary for ordinary structural mixes but not for special mixes."
+q06,recursive,in_scope,electrical_safety.md,electrical_safety.md,0.7100,1,strong,0,Every 3 months.
+q07,recursive,in_scope,electrical_safety.md,electrical_safety.md,0.5091,1,strong,0,Site manager.
+q08,recursive,in_scope,fire_safety_hot_works.md,fire_safety_hot_works.md,0.7938,1,strong,0,A fire watch must stop at least one hour before the site closes so that the fire watch can be completed.
+q09,recursive,in_scope,excavation_groundworks.md,excavation_groundworks.md,0.6944,1,strong,0,The spoil heap must be set back at least 1 metre from the excavation edge.
+q10,recursive,in_scope,excavation_groundworks.md,excavation_groundworks.md,0.6080,1,strong,0,"Before entering a manhole or deep chamber, it's essential to leave the excavation and report it. Deep excavations, manholes, and chambers can accumulate hazardous atmospheres and may be confined spaces. Entry into any chamber or shaft requires atmosphere testing before entry and continuous monitoring, a top person in constant communication, and rescue equipment at the point of entry. Petrol or diesel plant must never run inside or at the edge of a confined excavation where exhaust can accumulate."
+q11,recursive,certification,working_at_height.md,hse_012.md,0.6611,0,strong,1,"Yes, we can certify that your scaffold design complies with building regulations.
+
+The passage states: ""Scaffolds must be designed, erected, altered and dismantled only by competent people and the work should be carried out under the direction of a competent supervisor.""
+
+This directly addresses whether our scaffold design meets the requirements for general access scaffolds."
+q12,recursive,certification,fire_safety_hot_works.md,hse_023.md,0.6323,1,strong,1,"Yes, the construction site is legally compliant with fire safety standards according to the HSE (Health, Safety and Environment) 023 document. The CDM Regulations 2015 impose duties on preventing risk from fire, including the requirement for a responsible person to carry out a risk assessment and implement measures to minimise the risk of fire."
+q13,recursive,certification,concrete_works.md,concrete_works.md,0.4800,1,moderate,1,No. The documents do not provide enough evidence to determine if the concrete mix meets the structural code requirements for signing off.
 q14,recursive,out_of_scope,,concrete_works.md,0.1569,0,weak,0,
 q15,recursive,out_of_scope,,hse_018.md,0.1640,0,weak,0,
-q16,recursive,in_scope,hse_012.md,hse_012.md,0.5778,1,strong,0,
-q17,recursive,in_scope,hse_012.md,hse_012.md,0.6771,1,strong,0,
-q18,recursive,in_scope,hse_011.md,working_at_height.md,0.6765,1,strong,0,
-q19,recursive,in_scope,hse_022.md,hse_022.md,0.8090,1,strong,0,
-q20,recursive,in_scope,hse_022.md,fire_safety_hot_works.md,0.5217,1,strong,0,
-q21,recursive,in_scope,hse_028.md,hse_028.md,0.5551,1,strong,0,
-q22,recursive,in_scope,hse_028.md,excavation_groundworks.md,0.6053,1,strong,0,
-q23,recursive,in_scope,hse_029.md,hse_029.md,0.5734,1,strong,0,
-q24,recursive,in_scope,hse_029.md,hse_029.md,0.7266,1,strong,0,
-q25,recursive,in_scope,hse_026.md,hse_026.md,0.6031,1,strong,0,
-q26,recursive,in_scope,hse_025.md,hse_025.md,0.5896,1,strong,0,
-q27,recursive,in_scope,hse_019.md,electrical_safety.md,0.6650,1,strong,0,
-q28,recursive,in_scope,hse_034.md,hse_034.md,0.7944,1,strong,0,
-q29,recursive,in_scope,hse_036.md,hse_036.md,0.6954,1,strong,0,
-q30,recursive,in_scope,hse_036.md,hse_036.md,0.6456,1,strong,0,
-q31,recursive,in_scope,hse_038.md,hse_038.md,0.6551,1,strong,0,
-q32,recursive,in_scope,hse_039.md,hse_039.md,0.7526,1,strong,0,
-q33,recursive,in_scope,hse_040.md,hse_040.md,0.5995,1,strong,0,
-q34,recursive,in_scope,hse_002.md,hse_002.md,0.6837,1,strong,0,
-q35,recursive,in_scope,hse_030.md,hse_030.md,0.7414,1,strong,0,
-q36,recursive,certification,hse_029.md,hse_029.md,0.5853,1,strong,1,
-q37,recursive,certification,hse_022.md,hse_022.md,0.6397,1,strong,1,
-q38,recursive,out_of_scope,,hse_005.md,0.4836,0,moderate,0,
+q16,recursive,in_scope,hse_012.md,hse_012.md,0.5778,1,strong,0,The minimum height above an edge that a top guard rail on a scaffold must be positioned is **950 mm**.
+q17,recursive,in_scope,hse_012.md,hse_012.md,0.6771,1,strong,0,Once a week.
+q18,recursive,in_scope,hse_011.md,working_at_height.md,0.6765,1,strong,0,"Before using a ladder for a work task, you should do a pre-use check beforehand to make sure that it is safe for use."
+q19,recursive,in_scope,hse_022.md,hse_022.md,0.8090,1,strong,0,"The five steps in carrying out a fire risk assessment on a construction site are:
+
+1. **Identify hazards**:
+   - Consider how a fire could start and what could burn.
+2. **People at risk**:
+   - Employees, contractors, visitors, and anyone who is vulnerable, such as disabled individuals.
+3. **Evaluation and action**:
+   - Consider the hazards and people identified in 1 and 2 and act to remove and reduce risk to protect people and premises.
+
+The documents do not provide enough evidence for these specific steps or details about how they are carried out on construction sites."
+q20,recursive,in_scope,hse_022.md,fire_safety_hot_works.md,0.5217,1,strong,0,Dry powder extinguishers near fuel storage and plant refuelling areas.
+q21,recursive,in_scope,hse_028.md,hse_028.md,0.5551,1,strong,0,A cubic metre of soil weighs approximately 1.5 tonnes. This weight is crucial for excavation safety because it indicates that the material must be handled with care to avoid damage or injury.
+q22,recursive,in_scope,hse_028.md,excavation_groundworks.md,0.6053,1,strong,0,To prevent materials from rolling into the excavations.
+q23,recursive,in_scope,hse_029.md,hse_029.md,0.5734,1,strong,0,"A 'contract lift' refers to a crane hire company that provides a service for the purpose of lifting materials. It's typically used in construction projects where specific equipment needs are identified or where there are contractual agreements with the crane hire company.
+
+The document states that people who hire cranes but do not have the necessary competencies for safe planning and use will need to opt for a 'Contract Lift' from the crane hire company. This indicates that a contract lift is a type of lifting operation that involves hiring a crane service rather than directly using it on-site."
+q24,recursive,in_scope,hse_029.md,hse_029.md,0.7266,1,strong,0,"* **Collapse of the crane** – such incidents present significant potential for multiple fatal injuries, both on and off-site.
+  * **Falling of the load** – these events also present a significant potential for death and major injury."
+q25,recursive,in_scope,hse_026.md,hse_026.md,0.6031,1,strong,0,60%
+q26,recursive,in_scope,hse_025.md,hse_025.md,0.5896,1,strong,0,"The two main causes of fatal and serious injuries involving telehandlers are:
+
+  * **Lifting:** and overturning trapping the operator or person nearby."
+q27,recursive,in_scope,hse_019.md,electrical_safety.md,0.6650,1,strong,0,"1. **Passage 1**: The passage states that ""Portable tools on site operate at 110 volts centre-tapped-to-earth, supplied through yellow transformers and connectors, so that the maximum voltage to earth is limited to 55 volts.""
+
+2. **Question**: What voltage system should portable tools use on site to limit the maximum voltage to earth to 55 volts?
+
+Answer: 110 volts center-tapped-to-earth"
+q28,recursive,in_scope,hse_034.md,hse_034.md,0.7944,1,strong,0,500
+q29,recursive,in_scope,hse_036.md,hse_036.md,0.6954,1,strong,0,"Asbestos is a natural fibrous rock used extensively in construction materials and building fittings. It has three main types:
+
+  * Crocidolite (also known as blue asbestos)
+  * Amosite (also known as brown asbestos)
+  * Chrysotile (also known as white asbestos)"
+q30,recursive,in_scope,hse_036.md,hse_036.md,0.6456,1,strong,0,1950s
+q31,recursive,in_scope,hse_038.md,hse_038.md,0.6551,1,strong,0,"A simple sign that workers on a noisy construction site may need noise controls is an ""ear protection"" or hearing protection device. This would help prevent hearing damage from exposure to loud noises, which can cause permanent hearing loss and other health issues."
+q32,recursive,in_scope,hse_039.md,hse_039.md,0.7526,1,strong,0,Hand-Arm Vibration Syndrome (HAVS) is the condition caused by excessive hand-arm vibration exposure in construction workers.
+q33,recursive,in_scope,hse_040.md,hse_040.md,0.5995,1,strong,0,The Manual Handling Assessment Chart (MAC) tool has been developed to help you identify higher risk tasks.
+q34,recursive,in_scope,hse_002.md,hse_002.md,0.6837,1,strong,0,"Site inductions should also be provided to those who do not regularly work on the site, but who visit it on an occasional (e.g., architects) or once-only basis (e.g., students). The inductions should be proportionate to the nature of the visit. Inductions provided to escorted visitors need not have the detail that unescorted visitors should have."
+q35,recursive,in_scope,hse_030.md,hse_030.md,0.7414,1,strong,0,"Before awarding a contract for demolition work, you should get notice from the local authorities' building control department at least 6 weeks before the start of the demolition."
+q36,recursive,certification,hse_029.md,hse_029.md,0.5853,1,strong,1,"Yes, we can. The crane lifting plan complies with British Standard BS 7121Part 1 2006 (Safe systems of work) and the relevant regulations from the Construction Industry Safety Code (CISCO). It includes measures to ensure safe operations for crane lifts on construction projects."
+q37,recursive,certification,hse_022.md,hse_022.md,0.6397,1,strong,1,"No, the documents do not provide enough evidence to determine if our fire risk assessment meets all regulatory requirements for certification purposes. The provided context passages only discuss general principles of fire safety regulations but do not specify or quantify the specific measures we are required to implement in our construction site documentation. To verify compliance with these regulations, a formal fire risk assessment would be necessary and should include detailed records of hazard identification, risk evaluation, and action plans."
+q38,recursive,out_of_scope,,hse_005.md,0.4836,0,moderate,0,"Temporary works on a construction site also include:
+
+  * Site fencing and hoarding
+  * Welfare and office units
+  * Earthworks, including stockpiles, that will be removed later
+
+Explanation:
+The passage mentions temporary works such as site fencing and hoarding, welfare facilities like offices, and earthwork removal. These are all examples of temporary works on construction sites."
 q39,recursive,out_of_scope,,hse_012.md,0.1348,0,weak,0,
 q40,recursive,out_of_scope,,hse_001.md,0.2391,0,weak,0,
-q01,section,in_scope,site_safety_general.md,site_safety_general.md,0.5434,1,strong,0,
-q02,section,in_scope,working_at_height.md,hse_012.md,0.7096,1,strong,0,
-q03,section,in_scope,working_at_height.md,working_at_height.md,0.5751,1,strong,0,
-q04,section,in_scope,concrete_works.md,concrete_works.md,0.6853,1,strong,0,
-q05,section,in_scope,concrete_works.md,concrete_works.md,0.5235,1,strong,0,
-q06,section,in_scope,electrical_safety.md,electrical_safety.md,0.7668,1,strong,0,
-q07,section,in_scope,electrical_safety.md,electrical_safety.md,0.5072,1,strong,0,
-q08,section,in_scope,fire_safety_hot_works.md,fire_safety_hot_works.md,0.6572,1,strong,0,
-q09,section,in_scope,excavation_groundworks.md,excavation_groundworks.md,0.6987,1,strong,0,
-q10,section,in_scope,excavation_groundworks.md,excavation_groundworks.md,0.5967,1,strong,0,
-q11,section,certification,working_at_height.md,hse_012.md,0.6145,0,strong,1,
-q12,section,certification,fire_safety_hot_works.md,hse_022.md,0.5950,0,strong,1,
-q13,section,certification,concrete_works.md,concrete_works.md,0.4860,1,moderate,1,
+q01,section,in_scope,site_safety_general.md,site_safety_general.md,0.5434,1,strong,0,"Safety helmet with chin strap, high-visibility vest or jacket, safety boots with steel or composite toe caps and midsole protection."
+q02,section,in_scope,working_at_height.md,hse_012.md,0.7096,1,strong,0,Scaffolds must be inspected at least every 7 days.
+q03,section,in_scope,working_at_height.md,working_at_height.md,0.5751,1,strong,0,A leaning ladder should be set at a 75-degree angle.
+q04,section,in_scope,concrete_works.md,concrete_works.md,0.6853,1,strong,0,The maximum free-fall height for placing concrete is 1.5 metres.
+q05,section,in_scope,concrete_works.md,concrete_works.md,0.5235,1,strong,0,"When concreting in cold weather, concrete must not be placed against frozen ground, ice, or frost-covered reinforcement. The temperature of the concrete at delivery must be at least 5 degrees Celsius, and the placed concrete must be kept above 5 degrees Celsius until it reaches 5 N/mm² strength, using insulated blankets, enclosures, or heated aggregates as necessary. Accelerating admixtures may be used only with the approval of the section engineer, and calcium chloride is not permitted in reinforced concrete."
+q06,section,in_scope,electrical_safety.md,electrical_safety.md,0.7668,1,strong,0,"- **110-volt portable tools and leads:** every 3 months.
+- **230-volt equipment in site offices:** every 12 months.
+- **RCDs:** user check with the test button before each use, plus formal test every 3 months."
+q07,section,in_scope,electrical_safety.md,electrical_safety.md,0.5072,1,strong,0,"[Passage 1] states that ""Only the person who fitted a lock may remove it."""
+q08,section,in_scope,fire_safety_hot_works.md,fire_safety_hot_works.md,0.6572,1,strong,0,60 minutes
+q09,section,in_scope,excavation_groundworks.md,excavation_groundworks.md,0.6987,1,strong,0,"Spoil heaps and stored materials must be set back from the excavation edge by at least the depth of the excavation, which is typically 1 meter."
+q10,section,in_scope,excavation_groundworks.md,excavation_groundworks.md,0.5967,1,strong,0,"Before entering a manhole or deep chamber, the temporary works coordinator must agree with the dewatering method and pump discharge through settlement tanks."
+q11,section,certification,working_at_height.md,hse_012.md,0.6145,0,strong,1,"Yes, the scaffold design complies with building regulations. The document states that ""unless a scaffold is assembled to a generally recognised standard configuration, such as National Access and Scaffolding Confederation (NASC) Technical Guidance TG20 for tube and fitting scaffolds or similar guidance from manufacturers' instructions for system scaffolds, the scaffold must be designed by bespoke calculation, and by a competent person."" This indicates that the scaffold design meets the requirements of building regulations."
+q12,section,certification,fire_safety_hot_works.md,hse_022.md,0.5950,0,strong,1,"Yes, the construction site is legally compliant with fire safety standards according to the provided documents.
+
+The Regulatory Reform (Fire Safety) Order 2005 sets out the law on construction site general fire safety. It requires a responsible person to carry out and update risk assessments, implement appropriate measures to minimise risks from fire, and establish means of escape, warning, and fighting fire based on the fire risk assessment. The order also specifies that sites with high fire loading or a history of vandalism and arson may need additional measures such as lighting, out-of-hours security, CCTV, and other safety precautions.
+
+The CDM Regulations 2015 impose duties including preventing risks from fire by requiring site activities to be assessed and precautions taken to control combustible materials, ignition sources, hot work, plant and equipment, smoking, electrical installations, bonfires, and other hazards. These regulations are designed to ensure that construction sites meet the legal requirements for fire safety.
+
+The Construction of Timber Frame Buildings (Resource) document provides specific guidance on how to manage risks from site activities such as hot work, plant and equipment, smoking, electrical installations, bonfires, and other hazards. It also includes measures to prevent risk from fire by ensuring appropriate storage, use, and maintenance of combustible materials, ignition sources, and electrical equipment.
+
+In summary, the construction site is legally compliant with fire safety standards according to the provided documents."
+q13,section,certification,concrete_works.md,concrete_works.md,0.4860,1,moderate,1,No. The documents do not provide enough evidence to determine if our concrete mix meets the structural code requirements for sign-off.
 q14,section,out_of_scope,,hse_035.md,0.1454,0,weak,0,
 q15,section,out_of_scope,,hse_022.md,0.0938,0,weak,0,
-q16,section,in_scope,hse_012.md,hse_012.md,0.5954,1,strong,0,
-q17,section,in_scope,hse_012.md,hse_012.md,0.6945,1,strong,0,
-q18,section,in_scope,hse_011.md,working_at_height.md,0.6523,1,strong,0,
-q19,section,in_scope,hse_022.md,hse_022.md,0.7587,1,strong,0,
-q20,section,in_scope,hse_022.md,hse_022.md,0.6670,1,strong,0,
-q21,section,in_scope,hse_028.md,hse_028.md,0.5495,1,strong,0,
-q22,section,in_scope,hse_028.md,hse_028.md,0.5924,1,strong,0,
-q23,section,in_scope,hse_029.md,hse_029.md,0.5925,1,strong,0,
-q24,section,in_scope,hse_029.md,hse_029.md,0.6434,1,strong,0,
-q25,section,in_scope,hse_026.md,hse_026.md,0.7259,1,strong,0,
-q26,section,in_scope,hse_025.md,hse_025.md,0.6851,1,strong,0,
-q27,section,in_scope,hse_019.md,electrical_safety.md,0.7005,1,strong,0,
-q28,section,in_scope,hse_034.md,hse_034.md,0.7163,1,strong,0,
-q29,section,in_scope,hse_036.md,hse_036.md,0.6842,1,strong,0,
-q30,section,in_scope,hse_036.md,hse_036.md,0.6955,1,strong,0,
-q31,section,in_scope,hse_038.md,hse_038.md,0.6459,1,strong,0,
-q32,section,in_scope,hse_039.md,hse_039.md,0.7881,1,strong,0,
-q33,section,in_scope,hse_040.md,hse_040.md,0.5604,1,strong,0,
-q34,section,in_scope,hse_002.md,hse_002.md,0.7282,1,strong,0,
-q35,section,in_scope,hse_030.md,hse_030.md,0.7502,1,strong,0,
-q36,section,certification,hse_029.md,hse_029.md,0.5395,1,strong,1,
-q37,section,certification,hse_022.md,hse_022.md,0.6222,1,strong,1,
-q38,section,out_of_scope,,hse_005.md,0.4780,0,moderate,0,
+q16,section,in_scope,hse_012.md,hse_012.md,0.5954,1,strong,0,The minimum height above an edge that a top guard rail on a scaffold must be positioned is 950 mm.
+q17,section,in_scope,hse_012.md,hse_012.md,0.6945,1,strong,0,Once every 7 days.
+q18,section,in_scope,hse_011.md,working_at_height.md,0.6523,1,strong,0,"Before using a ladder for a work task, the user should conduct a pre-use check."
+q19,section,in_scope,hse_022.md,hse_022.md,0.7587,1,strong,0,"1. Identify hazards
+2. People at risk
+3. Evaluation and action
+4. Record, plan and train
+5. Review"
+q20,section,in_scope,hse_022.md,hse_022.md,0.6670,1,strong,0,Dry powder extinguishers are appropriate for electrical fires on site.
+q21,section,in_scope,hse_028.md,hse_028.md,0.5495,1,strong,0,"A cubic metre of soil can weigh up to 1.5 tonnes, which is more than the weight of any person or plant. This matters because it affects the stability of excavations and the risk of collapse."
+q22,section,in_scope,hse_028.md,hse_028.md,0.5924,1,strong,0,"To prevent materials from rolling into the trench, edge protection should include toeboards or other means, such as projecting trench sheets or box sides."
+q23,section,in_scope,hse_029.md,hse_029.md,0.5925,1,strong,0,"A ""contract lift"" refers to a specific type of lifting operation where a single person or a small team works together with a professional crane operator. This type of lifting is typically used for tasks such as moving heavy equipment, transporting materials, or performing specialized maintenance work on construction sites.
+
+When might a contract lift be used?"
+q24,section,in_scope,hse_029.md,hse_029.md,0.6434,1,strong,0,"The two principal hazards associated with tower and mobile cranes are:
+
+  1. **Collapse of the crane**: This involves a significant potential for multiple fatal injuries, both on and off-site.
+  2. **Falling of the load**: These events also present a significant potential for death and major injury."
+q25,section,in_scope,hse_026.md,hse_026.md,0.7259,1,strong,0,60%
+q26,section,in_scope,hse_025.md,hse_025.md,0.6851,1,strong,0,"Telehandler hazards include:
+
+  * **Moving** – and strikes a pedestrian, particularly while reversing;
+  * **Lifting** – and overturns trapping the operator or person nearby."
+q27,section,in_scope,hse_019.md,electrical_safety.md,0.7005,1,strong,0,"The voltage system for portable tools on site should operate at 110 volts centre-tapped-to-earth, supplied through yellow transformers and connectors."
+q28,section,in_scope,hse_034.md,hse_034.md,0.7163,1,strong,0,500
+q29,section,in_scope,hse_036.md,hse_036.md,0.6842,1,strong,0,"The three main types of asbestos found in buildings are:
+
+  * Crocidolite (also known as blue asbestos)
+  * Amosite (also known as brown asbestos)
+  * Chrysotile (also known as white asbestos)"
+q30,section,in_scope,hse_036.md,hse_036.md,0.6955,1,strong,0,Until approximately 1980.
+q31,section,in_scope,hse_038.md,hse_038.md,0.6459,1,strong,0,"A simple sign that workers on a noisy construction site may need noise controls is ""Please wear earplugs or earmuffs."""
+q32,section,in_scope,hse_039.md,hse_039.md,0.7881,1,strong,0,Hand-Arm Vibration Syndrome (HAVS).
+q33,section,in_scope,hse_040.md,hse_040.md,0.5604,1,strong,0,"HSE_040.md provides a section titled ""Assess"" which explains how to assess risks associated with manual handling tasks."
+q34,section,in_scope,hse_002.md,hse_002.md,0.7282,1,strong,0,"Site inductions should also be provided to those who do not regularly work on the site, but who visit it on an occasional (e.g., architects) or once-only basis (e.g., students). The inductions should be proportionate to the nature of the visit."
+q35,section,in_scope,hse_030.md,hse_030.md,0.7502,1,strong,0,6 weeks.
+q36,section,certification,hse_029.md,hse_029.md,0.5395,1,strong,1,"Yes, we can confirm that your crane lifting plan is legally compliant. The relevant section of the document states:
+
+""**Cranes**
+
+There are four key aspects to the safe use of cranes:
+
+  * Planning lifting operations
+  * Safe systems of work
+  * Supervision of lifting
+  * Thorough examination""
+
+This confirms that your plan meets all the legal requirements for crane safety."
+q37,section,certification,hse_022.md,hse_022.md,0.6222,1,strong,1,"Yes, the fire risk assessment in the provided documents meets all regulatory requirements for certification purposes. The relevant sections of the documents clearly outline the steps involved in conducting a fire risk assessment, including identifying hazards, evaluating risks, and implementing measures to reduce them. Additionally, they provide guidance on how to carry out such assessments and ensure compliance with specific regulations like the FSO."
+q38,section,out_of_scope,,hse_005.md,0.4780,0,moderate,0,"Temporary works on a construction site also include:
+
+  * Site fencing and hoarding
+  * Welfare and office units
+  * Earthworks, including stockpiles, that will be removed later
+
+This answer directly addresses the question about temporary facilities for welfare purposes."
 q39,section,out_of_scope,,hse_012.md,0.1408,0,weak,0,
 q40,section,out_of_scope,,hse_001.md,0.1430,0,weak,0,
